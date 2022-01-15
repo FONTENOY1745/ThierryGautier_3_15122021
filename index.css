@@ -11,6 +11,17 @@
   animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
 
+.wrapper {
+  background-color: #f6f6f6;
+}
+
+.body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+  max-width: 1280px;
+  background-color: #555;
+}
+
 .header img {
   padding-bottom: 0px;
   margin-bottom: -15px;
@@ -88,10 +99,6 @@
   line-height: 1;
 }
 
-.fa-heart:before {
-  content: "\f004";
-}
-
 .fa,
 .fas {
   font-weight: 900;
@@ -106,18 +113,6 @@
   top: 20px;
   right: 45px;
   font-size: x-large;
-}
-
-.body {
-  margin: 0px;
-  font-family: Roboto, sans-serif;
-  max-width: 1280px;
-  margin: 0 auto;
-  background-color: #555;
-}
-
-.wrapper {
-  background-color: #f6f6f6;
 }
 
 .header {
@@ -171,12 +166,6 @@
   padding: 5vw;
 }
 
-.fa-stack :nth-child(2) {
-  color: transparent;
-  transition: all 350ms;
-  padding: 0px;
-}
-
 @keyframes opacity {
   from {
     opacity: 0;
@@ -186,7 +175,7 @@
   }
 }
 
-#ensemble__animation {
+.loader__animation {
   width: 180px;
   height: 180px;
   border: 10px solid #cccccc;
@@ -317,10 +306,6 @@
   box-sizing: border-box;
 }
 
-.wrapper {
-  background: #f6f6f6;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -368,8 +353,8 @@ a:visited {
   box-shadow: 4px 4px 2px lightgrey;
   border-radius: 20px 20px;
   text-align: center;
-  height: 4rem;
-  line-height: 2rem;
+  height: 3.5rem;
+  line-height: 20px;
   white-space: nowrap;
 }
 
@@ -378,8 +363,10 @@ a:visited {
   background-color: #9356dc;
   color: white;
   position: relative;
-  right: 28px;
+  right: 21px;
   padding: 2px 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .section_steps__btn__ordered p {
