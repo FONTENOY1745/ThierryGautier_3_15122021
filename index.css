@@ -1,23 +1,13 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap");
-.header,
-.main,
-.footer {
-  animation-name: opacity;
-  animation-duration: 2500ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
-}
 
 .wrapper {
   background-color: #f6f6f6;
+  font-family: Roboto, sans-serif;
 }
 
 .body {
   margin: 0px;
-  font-family: Roboto, sans-serif;
   max-width: 1280px;
   background-color: #555;
 }
@@ -380,6 +370,20 @@ a:visited {
   padding: 0 0vw;
 }
 
+.menu {
+  animation-name: opacity;
+  animation-duration: 2500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0vw;
+}
 .menu h3 {
   padding-bottom: 0px;
   margin: 0 5vw;
@@ -458,11 +462,20 @@ a:visited {
   transition: all 700ms;
 }
 
+.card:hover > .card__check {
+  flex: 25%;
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
+}
+
 .menu__carte_entrees,
 .card {
   animation-name: appear;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
+  animation-delay: 500ms;
 }
 
 .card__text__description {
@@ -513,14 +526,6 @@ a:visited {
 
 .fa-check-circle:before {
   content: "\f058";
-}
-
-.menu__carte_entrees,
-.card {
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 500ms;
 }
 
 .card__text {
