@@ -295,10 +295,6 @@
   white-space: nowrap;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -362,7 +358,8 @@ a:visited {
   height: 20px;
 }
 
-.section_steps__btn__ordered p {
+.section_steps__btn__ordered
+.p {
   position: relative;
   bottom: 18px;
   right: 3.5px;
@@ -383,12 +380,6 @@ a:visited {
   animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  padding: 0 0vw;
-}
-
 .h2 {
   display: block;
   font-size: x-large;
@@ -397,17 +388,6 @@ a:visited {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
-}
-
-.menu h4,
-.menu h5 {
-  padding-top: 10px;
-  font-size: larger;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  padding-bottom: 0px;
-  margin: 0 5vw;
 }
 
 .h3 {
@@ -420,13 +400,34 @@ a:visited {
   font-weight: bold;
 }
 
+.menu,
+.h3 {
+  padding-bottom: 0px;
+  margin: 0 5vw;
+}
+
 .underline-h3 {
-  width: 80px;
+  width: 40px;
   height: 0.25em;
   background-color: #99e2d0;
   margin: 0;
   padding: 0;
   margin-left: 5vw;
+}
+
+.menu__carte_entrees,
+.card {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
+}
+
+.menu,
+.h4 {
+  margin-bottom: 0px; h4
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .h4 {
@@ -438,52 +439,25 @@ a:visited {
   font-weight: bold;
 }
 
-.h5 {
-  display: block;
-  margin-block-start: 1.33em;
-  margin-block-end: 1.33em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-.underline-h4 {
-  width: 60px;
-  height: 0.25em;
-  background-color: #99e2d0;
-  margin: 0;
-  padding: 0;
-  margin-left: 5vw;
-}
-
-.underline-h5 {
-  width: 90px;
-  height: 0.25em;
-  background-color: #99e2d0;
-  margin: 0;
-  padding: 0;
-  margin-left: 5vw;
-}
-
-.menu p {
+.menu,
+.h4,
+.p {
   padding: 0.25rem 5vw;
 }
 
 .card {
+  background-color: white;
+  box-shadow: 2px 2px 2px lightgrey;
+  border-radius: 20px 20px;
+  height: fit-content;
   margin: 1rem;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition: all 2000ms;
   cursor: pointer;
-  text-overflow: ellipsis;
-  flex: 100%;
-  background-color: white;
-  display: flex;
-  box-shadow: 2px 2px 2px lightgrey;
-  border-radius: 20px 20px;
-  height: fit-content;
   overflow: hidden;
-  width: 90vw;
+  text-overflow: ellipsis;
 }
 
 .card__text {
@@ -496,6 +470,10 @@ a:visited {
   transition: all 700ms;
 }
 
+.card:hover > .card__text {
+  flex: 75%;
+}
+
 .card__check {
   flex: 0%;
   color: #f6f6f6;
@@ -503,13 +481,13 @@ a:visited {
   font-size: xx-large;
   text-align: center;
   height: 2.1em;
+  line-height: 2.1em;
   white-space: nowrap;
   border-top-right-radius: 20px 20px;
   border-bottom-right-radius: 20px 20px;
   transform: translateX(100px);
   cursor: pointer;
   transition: all 700ms;
-  margin-left: 20px;
 }
 
 .card:hover .card__check {
@@ -520,24 +498,14 @@ a:visited {
   color: #f6f6f6;
 }
 
-.menu__carte_entrees {
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 500ms;
-}
-
-.card__text__description {
-  flex: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: -10px;
+.card__text__description,
+.p {
+  margin-top: 2px;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.card__text__description__ingredients {
+.card__text__description__ingredients, {
   text-overflow: ellipsis;
 }
 
@@ -548,9 +516,9 @@ a:visited {
   white-space: nowrap;
 }
 
+.card:hover,
 .fa-check-circle {
-  transform: rotate(359deg);
-  transition: transform 700ms;
+  transform: rotate(0deg);
 }
 
 .fa-check-circle:before {
