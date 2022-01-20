@@ -6,7 +6,7 @@
   font-family: Roboto, sans-serif;
 }
 
-.body {
+body {
   margin: 0px;
   max-width: 1280px;
   background-color: #555;
@@ -329,8 +329,15 @@ a:visited {
   font-weight: lighter;
 }
 
+.section_presentation__h4 {
+  color: #646262;
+  font-size: 17px;
+  font-weight: 400;
+}
+
 .section_steps {
   padding: 0 5vw 5vw 5vw;
+  padding-top: 25px;
 }
 
 .section_steps__btn {
@@ -345,6 +352,7 @@ a:visited {
   height: 3.5rem;
   line-height: 20px;
   white-space: nowrap;
+  align-items: center;
 }
 
 .section_steps__btn__ordered {
@@ -353,31 +361,29 @@ a:visited {
   color: white;
   position: relative;
   right: 21px;
-  padding: 2px 10px;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.section_steps__btn__ordered
+.section_steps__btn__ordered,
 .p {
   position: relative;
-  bottom: 18px;
-  right: 3.5px;
+  border-radius: 50%;
+  background-color: #9356dc;
+  color: white;
+  right: 28px;
+  padding: 2px 10px;
+  width: 10px;
+  height: 25px;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   padding: 0 0vw;
-}
-
-.menu {
-  animation-name: opacity;
-  animation-duration: 2500ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(1, -0.25, 0.93, 0.59);
 }
 
 .h2 {
@@ -423,9 +429,8 @@ a:visited {
   animation-delay: 500ms;
 }
 
-.menu,
-.h4 {
-  margin-bottom: 0px; h4
+.menu .h4 {
+  margin-bottom: 0px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
@@ -434,6 +439,16 @@ a:visited {
   display: block;
   margin-block-start: 1.33em;
   margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
@@ -450,9 +465,12 @@ a:visited {
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 20px 20px;
   height: fit-content;
-  margin: 1rem;
   display: flex;
-  flex-direction: row;
+  margin-top: 3vw;
+  margin-right: 0px;
+  margin-bottom: 3vw;
+  margin-left: 0px;
+  width: 90vw;
   justify-content: space-between;
   transition: all 2000ms;
   cursor: pointer;
@@ -480,7 +498,7 @@ a:visited {
   background-color: #99e2d0;
   font-size: xx-large;
   text-align: center;
-  height: 2.1em;
+  height: 100%;
   line-height: 2.1em;
   white-space: nowrap;
   border-top-right-radius: 20px 20px;
@@ -488,6 +506,9 @@ a:visited {
   transform: translateX(100px);
   cursor: pointer;
   transition: all 700ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card:hover .card__check {
@@ -505,15 +526,13 @@ a:visited {
   white-space: nowrap;
 }
 
-.card__text__description__ingredients, {
+.card__text__description__ingredients {
   text-overflow: ellipsis;
 }
 
 .card__text__description__price {
   font-weight: bold;
   margin-top: 2px;
-  overflow: hidden;
-  white-space: nowrap;
 }
 
 .card:hover,
@@ -569,9 +588,10 @@ a:visited {
 }
 
 .section_restaurants {
-  padding: 0 5vw;
   background-color: #f6f6f6;
   align-items: center;
+  padding: 0 5vw;
+  padding-bottom: 20px;
 }
 
 .section_restaurants__title {
@@ -636,4 +656,45 @@ a:visited {
   .card__img {
     max-width: 500px;
   }
+}
+
+.card__text h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.card__text h4 {
+  margin-bottom: 5px;
+}
+
+.card__text p {
+  margin-top: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu__carte_entrees {
+  animation-name: opacity;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 500ms;
+}
+
+.card__text__description__price {
+  display: flex;
+  align-items: flex-end;
+}
+
+.menu__carte_plats {
+  animation-name: opacity;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1000ms;
+}
+.menu__carte_desserts {
+  animation-name: opacity;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+  animation-delay: 1500ms;
 }
