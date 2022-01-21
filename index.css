@@ -11,6 +11,7 @@ body {
   max-width: 1280px;
   background-color: #555;
   font-family: Roboto, sans-serif;
+  max-width: 1280px;
 }
 
 .header img {
@@ -87,7 +88,6 @@ body {
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
-  line-height: 1;
 }
 
 .fa,
@@ -380,6 +380,14 @@ a:visited {
   height: 25px;
 }
 
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -401,6 +409,7 @@ a:visited {
   font-size: 1.17em;
   margin-block-start: 1em;
   margin-block-end: 1em;
+  margin-bottom: 2px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
@@ -408,31 +417,33 @@ a:visited {
 
 .menu,
 .h3 {
-  padding-bottom: 0px;
   margin: 0 5vw;
+  padding-top: 1px;
 }
 
 .underline-h3 {
-  width: 40px;
-  height: 0.25em;
+  width: 55px;
   background-color: #99e2d0;
-  margin: 0;
-  padding: 0;
-  margin-left: 5vw;
-}
-
-.menu__carte_entrees,
-.card {
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
-  animation-delay: 500ms;
-}
-
-.menu .h4 {
+  height: 0.25em;
   margin-bottom: 0px;
+}
+
+.menu h4 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: larger;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.menu p {
+  margin-bottom: 5px;
+}
+
+.menu h4,
+.menu p {
+  padding: 0.25rem 5vw;
 }
 
 .h4 {
@@ -442,6 +453,16 @@ a:visited {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+
+.fa-check-circle {
+  transform: rotate(359deg);
+  transition: transform 700ms;
+}
+
+.card:hover,
+.fa-check-circle {
+  transform: rotate(0deg);
 }
 
 .h5 {
@@ -454,28 +475,57 @@ a:visited {
   font-weight: bold;
 }
 
-.menu,
-.h4,
-.p {
-  padding: 0.25rem 5vw;
-}
-
 .card {
-  background-color: white;
   box-shadow: 2px 2px 2px lightgrey;
   border-radius: 20px 20px;
   height: fit-content;
   display: flex;
-  margin-top: 3vw;
-  margin-right: 0px;
-  margin-bottom: 3vw;
-  margin-left: 0px;
-  width: 90vw;
   justify-content: space-between;
   transition: all 2000ms;
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
+  background-color: white;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  flex-direction: row;
+}
+
+.menu__carte_entrees,
+.card {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+
+.card__check {
+  flex: 0%;
+  color: #f6f6f6;
+  background-color: #99e2d0;
+  font-size: xx-large;
+  text-align: center;
+  height: 2.1em;
+  height: 100%;
+  line-height: 2.1em;
+  white-space: nowrap;
+  border-top-right-radius: 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+  transform: translateX(100px);
+  cursor: pointer;
+  transition: all 700ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover > .card__check {
+  flex: 25%;
+  transform: translateX(0px);
+  background-color: #99e2d0;
+  cursor: pointer;
+  color: #f6f6f6;
 }
 
 .card__text {
@@ -492,35 +542,14 @@ a:visited {
   flex: 75%;
 }
 
-.card__check {
-  flex: 0%;
-  color: #f6f6f6;
-  background-color: #99e2d0;
-  font-size: xx-large;
-  text-align: center;
-  height: 100%;
-  line-height: 2.1em;
-  white-space: nowrap;
-  border-top-right-radius: 20px 20px;
-  border-bottom-right-radius: 20px 20px;
-  transform: translateX(100px);
-  cursor: pointer;
-  transition: all 700ms;
+.card__text__description {
+  flex: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.card:hover .card__check {
-  flex: 25%;
-  transform: translateX(0px);
-  background-color: #99e2d0;
-  cursor: pointer;
-  color: #f6f6f6;
-}
-
-.card__text__description,
-.p {
+.card__text__description p {
   margin-top: 2px;
   overflow: hidden;
   white-space: nowrap;
@@ -533,15 +562,6 @@ a:visited {
 .card__text__description__price {
   font-weight: bold;
   margin-top: 2px;
-}
-
-.card:hover,
-.fa-check-circle {
-  transform: rotate(0deg);
-}
-
-.fa-check-circle:before {
-  content: "\f058";
 }
 
 .button {
@@ -658,32 +678,11 @@ a:visited {
   }
 }
 
-.card__text h4 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin-bottom: 5px;
-}
-
-.card__text h4 {
-  margin-bottom: 5px;
-}
-
-.card__text p {
-  margin-top: 5px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .menu__carte_entrees {
   animation-name: opacity;
   animation-duration: 1000ms;
   animation-fill-mode: backwards;
   animation-delay: 500ms;
-}
-
-.card__text__description__price {
-  display: flex;
-  align-items: flex-end;
 }
 
 .menu__carte_plats {
