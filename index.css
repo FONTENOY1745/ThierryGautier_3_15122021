@@ -179,7 +179,7 @@ body {
   }
 }
 
-.loader__animation {
+#loader__animation {
   width: 180px;
   height: 180px;
   border: 10px solid #cccccc;
@@ -405,6 +405,14 @@ p {
   padding: 0 0vw;
 }
 
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
 .h2 {
   display: block;
   font-size: x-large;
@@ -413,6 +421,44 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  .menu,
+  .h3 {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .underline-h3 {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 310px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card__text {
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu h4,
+  .menu p {
+    padding: 0.25rem 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card__check {
+    height: 70px;
+  }
 }
 
 .h3 {
@@ -432,19 +478,12 @@ p {
 }
 
 .underline-h3 {
-  width: 40px;
+  width: 60px;
   height: 0.25em;
   background-color: #99e2d0;
   margin: 0;
   padding: 0;
   margin-left: 5vw;
-}
-
-.menu__carte_entrees,
-.card {
-  animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: backwards;
 }
 
 .menu h4 {
@@ -678,6 +717,18 @@ p {
 
 .card__img {
   max-width: 500px;
+}
+
+.menu__carte_entrees,
+.card {
+  animation-delay: 250ms;
+}
+
+.menu__carte_entrees,
+.card {
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
 }
 
 .menu__carte_plats,
