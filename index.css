@@ -22,6 +22,10 @@ body {
   margin-top: 0px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .fa-stack {
   display: inline-block;
   height: 2em;
@@ -447,7 +451,11 @@ p {
 
 @media screen and (min-width: 1024px) {
   .card {
-    max-width: 310px;
+    max-width: 500px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 3rem;
   }
 }
 
