@@ -459,6 +459,12 @@ p {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .card__text {
     padding: 0px;
