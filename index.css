@@ -23,6 +23,15 @@ body {
 }
 
 .fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 4em;
+}
+
+.fa-stack {
   font-size: xx-large;
   position: relative;
   bottom: 10px;
@@ -704,6 +713,7 @@ p {
   padding: 0px;
   position: relative;
   bottom: 10px;
+  right: 30px;
 }
 
 @media screen and (min-width: 1024px) {
