@@ -437,8 +437,7 @@ p {
 }
 
 @media screen and (min-width: 1024px) {
-  .menu,
-  .h3 {
+  .menu h3 {
     margin: 0 1rem;
   }
 }
@@ -456,6 +455,12 @@ p {
     margin-right: 1rem;
     margin-left: 1rem;
     margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 21rem;
   }
 }
 
