@@ -133,7 +133,7 @@ body {
   border-top-left-radius: 40px 40px;
   border-top-right-radius: 40px 40px;
   transform: translateY(-80px);
-  margin-bottom: -100px;
+  margin-bottom: -80px;
   padding: 5px 5vw;
   background-color: #f6f6f6;
   font-family: shrikhand, cursive;
@@ -554,9 +554,7 @@ p {
   text-overflow: ellipsis;
   background-color: white;
   margin-top: 1rem;
-  margin-right: 1rem;
   margin-bottom: 1rem;
-  margin-left: 1rem;
   flex-direction: row;
 }
 
@@ -583,6 +581,10 @@ p {
   background-color: #99e2d0;
   cursor: pointer;
   color: #f6f6f6;
+}
+
+.card:hover .fa-check-circle {
+  transform: rotate(0deg);
 }
 
 .card__text {
