@@ -750,8 +750,10 @@ p {
   }
 }
 
-.card__img {
-  max-width: 500px;
+@media screen and (min-width: 1024px) {
+  .card__img {
+    max-width: 500px;
+  }
 }
 
 .menu__carte_entrees,
@@ -794,11 +796,11 @@ p {
     width: 100%;
     max-width: unset;
   }
+}
 
-  .menu__carte_entrees,
-  .menu__carte_plats,
-  .menu__carte_desserts {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
+.menu__carte_entrees,
+.menu__carte_plats,
+.menu__carte_desserts {
+  padding-left: 1em;
+  padding-right: 1em;
 }
