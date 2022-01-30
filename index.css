@@ -806,3 +806,17 @@ p {
     justify-content: center;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .card__img img,
+  .card__caption,
+  .card__caption__text,
+  .card__caption__hrt {
+    max-width: unset;
+    width: 100%;
+    padding-left: 50px;
+  }
+  .card__img__new {
+    margin-right: 70px;
+  }
+}
