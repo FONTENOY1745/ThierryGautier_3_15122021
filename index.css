@@ -798,9 +798,11 @@ p {
   }
 }
 
-.menu__carte_entrees,
-.menu__carte_plats,
-.menu__carte_desserts {
-  padding-left: 1em;
-  padding-right: 1em;
+@media screen and (min-width: 1024px) {
+  .section_restaurants__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
